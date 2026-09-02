@@ -87,7 +87,7 @@ plt.plot(Speed, Braking_distance, label='Braking Distance', color='blue', linest
 plt.plot(Speed, reaction, label='Reaction Distance', color='green', linestyle=':')
 
 # draws a vertical line on the diagram and it shows the speed.
-plt.axvline(x=Speed, color='black', linestyle='-.', alpha=0.7, label=f'Your Input Speed ({Speed} km/h)')
+# plt.axvline(x=Speed, color='black', linestyle='-.', alpha=0.7, label=f'Your Input Speed ({Speed} km/h)')
 
 # adding title, xlabel and ylabel
 plt.title(f'Stopping Sight Distance (SSD) Analysis at {Slope}% Grade', fontsize=14)
