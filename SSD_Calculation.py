@@ -3,10 +3,9 @@
 print("calculating stopping sight distance")
 
 # 1. User Inputs
-# here we have to enter the vehicle speed 
+
 speed = float(input("Enter vehicle speed (km/h)"))
 # we should also enter slope of the surface as a percentage 
-# positive values denote an upgrade(uphill) while negative values denote( downhill )
 Slope = float(input("enter the percentage "))
 
 # 2. Convert speed from km/h to m/s (v = V / 3.6)
@@ -16,24 +15,23 @@ speed2 = speed / 3.6
 t = 2.5       # Perception-reaction time (2.5 seconds)
 g = 9.81      # Acceleration due to gravity 
 
-f = 0.35      # Coefficient of friction (wet pavement standard)
+f = 0.35      #  friction (wet pavement standard)
 
 # Convert grade percentage or slope to a decimal fraction
 G = Slope/100
 
 # 4. SSD Calculations
-# when calculating SSD(Stopping Sight Distance)----- reaction distance , braking distance
+
 
 react_dist = speed2 * t
 brak_dist = (speed2 ** 2) / (2 * g * (f + G))
 total = react_dist+ brak_dist
 # 5. Engineering Safety Evaluation (Using IF Conditions)
-# we created an empty list
 # If we face a danger, the warning will be added to this list
 warnings = []
 
 # Check for steep downgrades (Dangerous downhill conditions)
-# If you are going downhill, gravity pushes you forward
+# 
 if Slope <= -5:
     warnings.append(" downhill grade increases braking distance significantly!!!")
 
@@ -42,7 +40,7 @@ if speed > 100:
     warnings.append("  recommended to install (reduce speed) sign")
 
 # Check if braking distance takes up too much of the stopping distance
-# if it is  60 percent of the stopping sight distance
+
 if brak_dist > (total * 0.6):
     warnings.append(" Road friction  is critical. Consider anti-skid pavement.")
 
@@ -67,7 +65,6 @@ if warnings:
 import matplotlib.pyplot as plt
 import numpy as np
 # Numerical python
-# we want to check different stopping distances if the velocity changes
 Speed = np.linspace(20, 140, 100)
 # physical dynamic equations require SI units
 speed2 = Speed/ 3.6
@@ -90,7 +87,6 @@ plt.plot(Speed, Braking_distance, label='Braking Distance', color='blue', linest
 plt.plot(Speed, reaction, label='Reaction Distance', color='green', linestyle=':')
 
 # draws a vertical line on the diagram and it shows the speed.
-# alpha here shows transparency
 plt.axvline(x=Speed, color='black', linestyle='-.', alpha=0.7, label=f'Your Input Speed ({Speed} km/h)')
 
 # adding title, xlabel and ylabel
