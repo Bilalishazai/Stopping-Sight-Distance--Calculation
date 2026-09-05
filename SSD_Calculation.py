@@ -24,7 +24,7 @@ react_dist = speed2 * t
 brak_dist = (speed2 ** 2) / (2 * g * (f + G))
 total = react_dist+ brak_dist
 # 5. Engineering Safety Evaluation (Using IF Conditions)
-
+warnings=[]
 # Check for steep downgrades (Dangerous downhill conditions)
 if Slope <= -5:
     warnings.append(" downhill grade increases braking distance significantly!!!")
