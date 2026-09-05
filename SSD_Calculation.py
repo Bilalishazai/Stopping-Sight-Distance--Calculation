@@ -7,7 +7,7 @@ print("calculating stopping sight distance")
 speed = float(input("Enter vehicle speed (km/h)"))
 Slope = float(input("enter the percentage "))
 
-# 2. Convert speed from km/h to m/s (v = V / 3.6)
+
 speed2 = speed / 3.6
 
 # 3. AASHTO Standard Parameters
@@ -23,17 +23,17 @@ G = Slope/100
 react_dist = speed2 * t
 brak_dist = (speed2 ** 2) / (2 * g * (f + G))
 total = react_dist+ brak_dist
-# 5. Engineering Safety Evaluation (Using IF Conditions)
+# 5. engineering evaluation
 warnings=[]
 # Check for steep downgrades (Dangerous downhill conditions)
 if Slope <= -5:
     warnings.append(" downhill grade increases braking distance significantly!!!")
 
-# Check for high speed risks
+
 if speed > 100:
     warnings.append("  recommended to install (reduce speed) sign")
 
-# Check if braking distance takes up too much of the stopping distance
+# Check if braking distance takes  too much of the stopping distance
 
 if brak_dist > (total * 0.6):
     warnings.append(" Road friction  is critical. Consider anti-skid pavement.")
@@ -64,8 +64,7 @@ reaction = speed2 * t
 Braking_distance = (speed2 ** 2) / (2 * g * (f + G))
 Total_ssd= reaction+ Braking_distance
 
-# to specify the size of the diagram
-#width=10inch and height=6inch
+
 plt.figure(figsize=(10, 6))
 
 
