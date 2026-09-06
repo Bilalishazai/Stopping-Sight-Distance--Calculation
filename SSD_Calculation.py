@@ -11,10 +11,10 @@ Slope = float(input("enter the percentage "))
 speed2 = speed / 3.6
 
 # 3. AASHTO Standard Parameters
-t = 2.5       # Perception-reaction time (2.5 seconds)
-g = 9.81      # Acceleration due to gravity 
+t = 2.5       
+g = 9.81      
 
-f = 0.35      #  friction (wet pavement standard)
+f = 0.35      
 
 
 G = Slope/100
@@ -27,7 +27,7 @@ total = react_dist+ brak_dist
 warnings=[]
 # Check for steep downgrades (Dangerous downhill conditions)
 if Slope <= -5:
-    warnings.append(" downhill grade increases braking distance significantly!!!")
+    warnings.append(" downhill grade increases braking distance !!!")
 
 
 if speed > 100:
