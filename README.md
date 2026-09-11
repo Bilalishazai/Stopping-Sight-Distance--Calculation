@@ -6,14 +6,17 @@ The main objective is to calculate:
 
 
 **How does it work?**
+
 First, we enter the speed of the vehicle and  then the program calculates Reaction distance, braking distance and total SSD.
 
 **tools**
 
 Python 
+
 Matplotlib 
 
 **Results**
+
 for a vehicle speed of 120km/h and -5% grade:
 - reaction distance: 83.3m
 - Braking distance: 188.7m
