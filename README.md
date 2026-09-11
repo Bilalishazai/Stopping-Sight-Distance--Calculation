@@ -1,10 +1,10 @@
 This project calculates stopping sight distance based on AASHTO guidelines.
-**The main objective is to calculate **
+The main objective is to calculate:
 - Reaction distance
 - Braking distance
 - Total stopping sight distance
 **How does it work?**
-First, we enter the speed of the vehicle and speed then the program calculates Reaction distance, braking distance and total SSD.
+First, we enter the speed of the vehicle and  then the program calculates Reaction distance, braking distance and total SSD.
 
 **tools**
 Python 
